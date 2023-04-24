@@ -5,6 +5,7 @@
 
 <title>  MyPortfolioWebSite  </title>
 <link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/66b6ce2b26.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -13,12 +14,10 @@
 <div id="header">
     <div class="container">
         <nav>
-            <img src="#" class="logo">
+            <img src="" class="logo">
             <ul>
 
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="#">About Me</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact</a></li>
 
@@ -26,8 +25,9 @@
         </nav>
 
         <div class="header-text">
-            <p>Game Developer</p>
-            <h1>Hi, I'm Ameha from ASTU.</h1>
+            <p>Game Developer | Web Developer | Student</p>
+            <br>
+            <h1>Hi, I'm Ameha.</h1>
 
         </div>
     </div>
@@ -50,7 +50,7 @@
 
                 <br><br>
                 
-                <p>Welcome to my portfolio website! 
+                <p class="myself">Welcome to my Portfolio Website! 
                 I am a passionate software engineer with a knack for writing clean, efficient and maintainable code. 
 
                 Throughout my career, I have gained extensive experience in developing applications using various programming languages
@@ -60,21 +60,40 @@
 
                 If you are looking for a dedicated software engineer who is passionate about delivering high-quality,
                 user-focused solutions, then look no further!
-                
+                <br>
                 Please feel free to explore my portfolio and contact me for any further information.</p>
 
                 <div class="tab_titles">
 
-                    <p class="tab_links active_link"> Skills</p>
-                    <p class="tab_links"> Experiance</p>
-                    <p class="tab_links"> Education</p>
+                    <p class="tab_links active_link" onclick="opentab('skills')"> Skills</p>
+                    <p class="tab_links" onclick="opentab('experiance')"> Experiance</p>
+                    <p class="tab_links" onclick="opentab('education')"> Education</p>
 
                 </div>
-                <div class="tab_content">
+                <div class="tab_content active_tab" id="skills">
                     <ul>
                         <li><span>Game Developer</span><br>Game Programming with Godot</li>
                         <li><span>Web Developement</span> <br> Designing Web Application/Interface</li>
                         <li><span>UX/UI</span> <br> Interface and Graphical Design</li>
+                    </ul>
+
+                </div>
+
+                <div class="tab_content" id="experiance">
+                    <ul>
+                        <li><span>2023 - current</span> <br> Internship at Ethiopian Institute of Technology</li>
+                        <li><span>2020 - 2022</span><br>Game Development with Godot</li>
+                        <li><span>2021 - 2022</span> <br> Designing Web Application/Interface</li>
+                       
+                    </ul>
+
+                </div>
+
+                <div class="tab_content" id="education">
+                    <ul>
+                        <li><span>Bachelors Degree in Software Enginerring</span><br>In Adama Science and Technology University</li>
+                        <li><span>Certificate of Diploma</span> <br> From Kotebe Metropolitan University</li>
+                        <li><span>Top Game Developer Recognition In Ethiopia</span> <br> From Ethiopian Game Development Association</li>
                     </ul>
 
                 </div>
@@ -84,6 +103,112 @@
     </div>
 
 </div>
+
+
+<! ................................................... Porfolio .............................................................>
+
+ <div id="portfolio">
+    <div class="container">
+
+        <h1 class="text_des"> Projects</h1>
+
+        <div class="work_list">
+            <div class="work_1">
+                <img src="Images/work_3.png">
+                <div class="layer">
+
+                    <h3>Space Shooter Game</h3>
+                    <p class="myself">It's a fun shooting game to play and have a Good Time!</p>
+                    <a href="#">  <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>   </a>
+                     
+                </div>
+            </div>
+
+            <div class="work_1">
+                <img src="Images/work_1.png">
+                <div class="layer">
+
+                    <h3>Coming Soon !</h3>
+                    <p> </p>
+                    <a href="#">  <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>   </a>
+                     
+                </div>
+            </div>
+
+            <div class="work_1">
+                <img src="Images/work_1.png">
+                <div class="layer">
+
+                    <h3>Coming Soon !</h3>
+                    <p> </p>
+                    <a href="#">  <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>   </a>
+                     
+                </div>
+            </div>
+
+        </div>
+
+        <a class="btn" href="#">See More</a>
+
+    </div>
+
+ </div>
+
+ <! ........................................ Contact .......................................................>
+
+ <div class="contact">
+    <div class="container">
+        <div class="row">
+        <div class="contact_left">
+            <h1 class="text_des">Contact</h1>
+            <p class="myself"><i class="fa-regular fa-envelope"></i>amehaseyoum3456@gmail.com</p>
+            <p class="myself"><i class="fa-sharp fa-solid fa-square-phone"></i>+251923790730</p>
+            <div class="social_icons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </div>
+ 
+
+        <div class="contact_right">
+
+            <form action="">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Email" required>
+                <textarea name="Message" id=""  rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2"> Submit</button>
+            </form>
+
+        </div>
+    </div>
+        </div>
+    
+ </div>
+
+
+
+<script>
+
+    function opentab(tabname){
+
+        var tablinks = document.getElementsByClassName("tab_links");
+        var tabcontents = document.getElementsByClassName("tab_content");
+
+        for(tablink of tablinks){
+            tablink.classList.remove("active_link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active_tab");
+        }
+
+        event.currentTarget.classList.add("active_link")
+        document.getElementById(tabname).classList.add("active_tab")
+
+    }
+
+</script>
 
 </body>
 

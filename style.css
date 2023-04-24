@@ -25,6 +25,7 @@ body{
 
 .container{
     padding: 10px 10%;
+    padding-top: 10px;
 }
 
 nav{
@@ -91,11 +92,19 @@ nav ul li a:hover::after{
 p{
 
     font-family: monospace;
-    font-size: 15px;
+    font-size: 20px;
 
 }
+p.myself{
+
+    font-size: 16px;
+}
+
+
 
 /* ................................... ABOUT ME ................................ */
+
+
 
 #about{
 
@@ -127,9 +136,9 @@ p{
 
 .text_des{
 
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
-    color: #fff;
+    color: blanchedalmond;
 }
 
 .tab_titles{
@@ -154,7 +163,7 @@ p{
     content: '';
     width: 0;
     height: 3px;
-    background: #fff;
+    background: wheat;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -165,6 +174,7 @@ p{
 
     width: 50%;
     border-radius: 100px;
+
 }
 
 .tab_content ul li{
@@ -178,3 +188,189 @@ p{
     color: bisque;
     font-size: 15px ;
 }
+
+.tab_content{
+
+    display: none;
+
+}
+
+.tab_content.active_tab{
+
+    display: block;
+
+}
+
+/* ............................................... Projects .......................................... */
+
+#portfolio{
+
+    padding: 50px 0;
+}
+
+.work_list{
+
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+
+.work_1{
+
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work_1 img{
+
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.1), lightblue);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    transition: height 0.5s;
+
+}
+
+.layer h3{
+
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+
+    margin-top: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.work_1:hover img{
+
+    transform: scale(1.1);
+
+}
+
+.work_1:hover .layer{
+
+    height:100%;
+
+}
+
+.btn{
+
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #fff;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color:blanchedalmond;
+    transition: background 0.5s;
+
+}
+
+.btn:hover{
+
+    background: lightslategray;
+}
+
+/* ..................................... Contact.............................................. */
+
+.contact_left{
+
+    flex-basis: 35%;
+
+}
+.contact_right{
+
+    flex-basis: 60%;
+}
+
+.contact_left p{
+
+    margin-top: 30px;
+}
+
+.contact_left p i{
+
+    color: #fff;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social_icons{
+
+    margin-top: 30px;
+}
+.social_icons a{
+
+    text-decoration:none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #fff;
+    display: inline-block;
+    transition: transform 0.5s;
+
+}
+.social_icons a:hover{
+
+    color: lightblue;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+
+    display: inline-block;
+    background: #262626;
+    
+}
+
+.contact_right form{
+
+    width: 100%;
+    padding-top: 70px;
+}
+
+form input, form textarea{
+
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+
