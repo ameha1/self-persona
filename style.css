@@ -6,6 +6,11 @@
     box-sizing:border-box;
 
 }
+html{
+
+    scroll-behavior: smooth;
+
+}
 
 body{
 
@@ -291,8 +296,8 @@ p.myself{
     margin: 50px auto;
     width: fit-content;
     border: 1px solid #fff;
-    padding: 14px 50px;
-    border-radius: 6px;
+    padding: 10px 40px;
+    border-radius: 5px;
     text-decoration: none;
     color:blanchedalmond;
     transition: background 0.5s;
@@ -354,6 +359,11 @@ p.myself{
     
 }
 
+.btn.btn2:hover{
+
+    color: aquamarine;
+}
+
 .contact_right form{
 
     width: 100%;
@@ -373,4 +383,92 @@ form input, form textarea{
     border-radius: 6px;
 }
 
+nav .fas{
+    display: none;
+}
 
+.copyright{
+
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 100;
+    margin-top: 20px;
+
+}
+
+#msg{
+
+    color: #61b752;
+    display: block;
+    padding-bottom: 10px;
+}
+
+
+/* ......................................... Making the WebSite Responsive ................................  */
+
+@media screen and (max-width:800px){
+
+#header{
+    background-image: url(Images/phone-background.jpg);
+}
+
+.header-text{
+    margin-top: 100%;
+    font-size: 15px;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-text h1{
+    font-size: 30px;
+}
+nav .fas{
+    display: block;
+    font-size: 25px;
+}
+nav ul{
+
+    background: #262626;
+    position: absolute;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+
+}
+nav ul li{
+    display: block;
+    margin: 25px;
+}
+
+nav ul .fas{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+}
+.text_des{
+    font-size: 40px;
+}
+.about_col_1, .about_col_2{
+    flex-basis: 100%;
+}
+.about_col_1{
+    margin-bottom: 30px;
+}
+.about_col_2{
+    font-size: 14px;
+}
+.tab_links{
+    font-size: 14px;
+    margin-right: 20px;
+}
+.contact_left, .contact_right{
+    flex-basis: 100%;
+}
+}

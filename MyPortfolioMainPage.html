@@ -2,10 +2,11 @@
 <html>
 
 <head>
-
-<title>  MyPortfolioWebSite  </title>
-<link rel="stylesheet" href="style.css">
-<script src="https://kit.fontawesome.com/66b6ce2b26.js" crossorigin="anonymous"></script>
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  MyPortfolioWebSite  </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/66b6ce2b26.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -15,13 +16,14 @@
     <div class="container">
         <nav>
             <img src="" class="logo">
-            <ul>
+            <ul id="sidemenu">
 
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-solid fa-x" onclick="closemenu()"></i>
             </ul>
+            <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
 
         <div class="header-text">
@@ -156,16 +158,19 @@
 
  <! ........................................ Contact .......................................................>
 
- <div class="contact">
+ <div class="contact" id="contact">
     <div class="container">
         <div class="row">
         <div class="contact_left">
             <h1 class="text_des">Contact</h1>
+
+            <br><br><br>
+
             <p class="myself"><i class="fa-regular fa-envelope"></i>amehaseyoum3456@gmail.com</p>
             <p class="myself"><i class="fa-sharp fa-solid fa-square-phone"></i>+251923790730</p>
             <div class="social_icons">
                 <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
                 <a href=""><i class="fa-brands fa-linkedin"></i></a>
                 <a href=""><i class="fa-brands fa-telegram"></i></a>
             </div>
@@ -174,16 +179,25 @@
 
         <div class="contact_right">
 
-            <form action="">
+            <form name="submit-to-google-sheet">
                 <input type="text" name="Name" placeholder="Your Name" required>
                 <input type="email" name="Email" placeholder="Email" required>
                 <textarea name="Message" id=""  rows="6" placeholder="Your Message"></textarea>
                 <button type="submit" class="btn btn2"> Submit</button>
             </form>
-
+            <span id="msg"></span>
         </div>
     </div>
-        </div>
+</div>
+
+    <div class="copyright">
+
+        <p class="myself"> © 2023 Ameha Seyoum.</p>
+        <br>
+        <p class="myself"> Make It Simple.</p>
+
+    </div>
+
     
  </div>
 
@@ -210,6 +224,38 @@
 
 </script>
 
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz5MzqXMmZXNDqyZCreXmHSJSWJZYA1rSyik-AXj1d3XbME5mjLPF3wEu4zrr5LVUWHXA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+         msg.innerHTML = "Message Submitted successfully!"
+        setTimeout(function(){msg.innerHTML=""},5000)
+        form.reset();
+    })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
 </body>
 
 </html>
+
