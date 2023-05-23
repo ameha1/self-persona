@@ -7,6 +7,7 @@
     <title>  MyPortfolioWebSite  </title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/66b6ce2b26.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 
 </head>
 
@@ -18,9 +19,9 @@
             <img src="Images/logo.jpg" class="logo">
             <ul id="sidemenu">
 
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about"><h2 class="text_des">About</h2></a></li>
+                <li><a href="#portfolio"><h2 class="text_des">Portfolio</h2></a></li>
+                <li><a href="#contact"><h2 class="text_des">Contact</h2></a></li>
                 <i class="fas fa-solid fa-x" onclick="closemenu()"></i>
             </ul>
             <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
@@ -36,7 +37,7 @@
 </div>
 
 
-<! ................................................... about ...........................................................  > 
+<!-- ------------------------------------------------  ABOUT  ----------------------------------------------------------------------> 
 
 <div id="about">
     <div class="container">
@@ -109,7 +110,7 @@
 </div>
 
 
-<! ................................................... Porfolio .............................................................>
+<!-- --------------------------------------------------  PORTFOLIO  ------------------------------------------------------------------>>
 
  <div id="portfolio">
     <div class="container">
@@ -158,7 +159,7 @@
 
  </div>
 
- <! ........................................ Contact .......................................................>
+ <!-- -----------------------------------------------------  CONTACT  -------------------------------------------------------------->>
 
  <div class="contact" id="contact">
     <div class="container">
@@ -171,7 +172,7 @@
             <p class="myself"><i class="fa-regular fa-envelope"></i>amehaseyoum3456@gmail.com</p>
             <p class="myself"><i class="fa-sharp fa-solid fa-square-phone"></i>+251923790730</p>
             <div class="social_icons">
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
                 <a href="https://github.com/ameha1"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BquGv2iZ2TJCL1BxsB5xddw%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://t.me/godaccess"><i class="fa-brands fa-telegram"></i></a>
@@ -202,59 +203,6 @@
 
     
  </div>
-
- 
-<script>
-
-    function opentab(tabname){
-
-        var tablinks = document.getElementsByClassName("tab_links");
-        var tabcontents = document.getElementsByClassName("tab_content");
-
-        for(tablink of tablinks){
-            tablink.classList.remove("active_link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active_tab");
-        }
-
-        event.currentTarget.classList.add("active_link")
-        document.getElementById(tabname).classList.add("active_tab")
-
-    }
-
-</script>
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbz5MzqXMmZXNDqyZCreXmHSJSWJZYA1rSyik-AXj1d3XbME5mjLPF3wEu4zrr5LVUWHXA/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-         msg.innerHTML = "Message Submitted successfully!"
-        setTimeout(function(){msg.innerHTML=""},5000)
-        form.reset();
-    })
-        .catch(error => console.error('Error!', error.message))
-    })
-</script>
-
-<script>
-
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-
-</script>
 
 </body>
 

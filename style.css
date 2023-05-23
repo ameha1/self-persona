@@ -19,6 +19,28 @@ body{
 
 }
 
+h1.text_des{
+
+    color: #c9d0d4; 
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-size: 46px; 
+    font-weight: 100; 
+    line-height: 50px; 
+    letter-spacing: 1px; 
+    padding: 0 0 40px; 
+    border-bottom: #555;
+
+}
+
+h2.text_des{
+
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: 100; 
+    line-height: 50px; 
+
+}
+
 #header{
     
 
@@ -105,7 +127,6 @@ p.myself{
 
     font-size: 16px;
 }
-
 
 
 /* ................................... ABOUT ME ................................ */
