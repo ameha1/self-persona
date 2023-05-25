@@ -85,7 +85,10 @@ nav ul li a{
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    position:relative
+    position:relative;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 100; 
+    line-height: 15px; 
 }
 
 nav ul li a::after{
@@ -199,7 +202,7 @@ p.myself{
 }
 .tab_links.active_link::after{
 
-    width: 50%;
+    width: 60%;
     border-radius: 100px;
 
 }
@@ -370,7 +373,6 @@ p.myself{
 }
 .social_icons a:hover{
 
-    color: lightblue;
     transform: translateY(-5px);
 }
 
@@ -426,6 +428,19 @@ nav .fas{
     display: block;
     padding-bottom: 10px;
 }
+
+.social_icons a.twitter:hover{
+    color: #00acee;
+}
+
+.social_icons a.linkedin:hover{
+    color: #0072b1;
+}
+
+.social_icons a.telegram:hover{
+    color: #0088cc;
+}
+
 
 
 /* ......................................... Making the WebSite Responsive ................................  */

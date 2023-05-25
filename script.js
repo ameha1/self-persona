@@ -31,13 +31,4 @@ form.addEventListener('submit', e => {
     .catch(error => console.error('Error!', error.message))
 })
 
-var sidemenu = document.getElementById("sidemenu");
-
-function openmenu(){
-    sidemenu.style.right = "0";
-
-}
-function closemenu(){
-    sidemenu.style.right = "-200px";
-}
 

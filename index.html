@@ -30,14 +30,14 @@
         <div class="header-text">
             <p>Game Developer | Web Developer | Student</p>
             <br>
-            <h1>Hi, I'm Ameha.</h1>
+            <h1>Hi, I'm <span>ameha.</span></h1>
 
         </div>
     </div>
 </div>
 
 
-<!-- ------------------------------------------------  ABOUT  ----------------------------------------------------------------------> 
+<!-- ------------------------------------------------  ABOUT_ME  ----------------------------------------------------------------------> 
 
 <div id="about">
     <div class="container">
@@ -51,15 +51,11 @@
             <div class="about_col_2">
                 <h1 class="text_des">About Me</h1>
 
-                <br><br>
-                
-                <p class="myself">Welcome to my Portfolio Website! 
+                <p class="myself">
                 I am a passionate software engineer with a knack for writing clean, efficient and maintainable code. 
 
                 Throughout my career, I have gained extensive experience in developing applications using various programming languages
                 such as Java, Python and C++. 
-
-                I specialize in full-stack development, creating seamless experiences for users through web and mobile applications.
 
                 If you are looking for a dedicated software engineer who is passionate about delivering high-quality,
                 user-focused solutions, then look no further!
@@ -153,7 +149,7 @@
 
         </div>
 
-        <a class="btn" href="#">See More</a>
+       <!--- <a class="btn" href="#">See less</a> -->
 
     </div>
 
@@ -167,15 +163,15 @@
         <div class="contact_left">
             <h1 class="text_des">Contact</h1>
 
-            <br><br><br>
+            <br><br>
 
             <p class="myself"><i class="fa-regular fa-envelope"></i>amehaseyoum3456@gmail.com</p>
             <p class="myself"><i class="fa-sharp fa-solid fa-square-phone"></i>+251923790730</p>
             <div class="social_icons">
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://github.com/ameha1"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BquGv2iZ2TJCL1BxsB5xddw%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://t.me/godaccess"><i class="fa-brands fa-telegram"></i></a>
+                <a class="twitter"  href=""><i class="fa-brands fa-twitter"></i></a>
+                <a class="github"   href="https://github.com/ameha1"><i class="fa-brands fa-github"></i></a>
+                <a class="linkedin" href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BquGv2iZ2TJCL1BxsB5xddw%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
+                <a class="telegram" href="https://t.me/godaccess"><i class="fa-brands fa-telegram"></i></a>
             </div>
         </div>
  
@@ -203,6 +199,22 @@
 
     
  </div>
+
+ <script>
+    
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+
+ </script>
 
 </body>
 
