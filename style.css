@@ -202,8 +202,8 @@ p.myself{
 }
 .tab_links.active_link::after{
 
-    width: 60%;
-    border-radius: 100px;
+    width: 100%;
+    border-radius: 25px;
 
 }
 
